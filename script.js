@@ -5,7 +5,7 @@ document.getElementById("createAccountForm").addEventListener("submit", function
     const password = document.getElementById("password").value;
     
     // Simulated backend (GitHub Pages)
-    const databaseURL = "https://api.github.com/repos/yourusername/yourrepository/contents/accounts.json";
+    const databaseURL = "https://api.github.com/repos/housseinbaz/Login-Attendence/contents/accounts.json";
     
     // Prepare data to save
     const newData = {
@@ -17,7 +17,7 @@ document.getElementById("createAccountForm").addEventListener("submit", function
     fetch(databaseURL, {
         method: 'GET',
         headers: {
-            'Authorization': 'token YOUR_GITHUB_PERSONAL_ACCESS_TOKEN',
+            'Authorization': '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',
         }
     })
     .then(response => response.json())
@@ -29,7 +29,7 @@ document.getElementById("createAccountForm").addEventListener("submit", function
         return fetch(databaseURL, {
             method: 'PUT',
             headers: {
-                'Authorization': 'token YOUR_GITHUB_PERSONAL_ACCESS_TOKEN',
+                'Authorization': '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',
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
